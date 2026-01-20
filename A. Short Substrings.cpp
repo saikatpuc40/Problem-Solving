@@ -8,7 +8,10 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>str[i];
         for(int j=0;j<=str[i].length()-1;j++){
-            if(str[i][j]==str[i][j+1]){
+            if(j==0||j==str[i].length()){
+                result+=str[i][j];
+            }
+            else if(str[i][j]==str[i][j+1]){
               result+=str[i][j];
               j++;
             }
